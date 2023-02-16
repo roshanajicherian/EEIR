@@ -1,0 +1,64 @@
+1. Construct a graph using the input file 
+
+graph = 
+{
+    edges : [{name : "edgeName", x : xCoord, y: yCoord}, {} ......],
+    links : [
+                {
+                    name : "linkName", src : source, dst : destination , 
+                    moduleCapandCost : [(cap1,cost1),(cap2,cost2)],
+                    zValue : null // The capacity at which to be transimitted.
+                    linkStatus : 1 //link ON or OFF
+                }
+            ]
+    demand: [
+                {
+                    demandId: "demandName", src : source, dest : destination,
+                    demandValue : dVal
+                }
+            ]
+}
+
+2. Select Source and Destination Nodes
+
+3. Make a set of currently ON edges which intially contains all the edges
+EON = getAllEdgeNames () //getAllEdgeNames returns a list of edge names
+EFIXED = []
+
+//Step 3 could be ommited if modifications are made to the links dictionary
+
+for i in graph.demand
+{
+    source = i.src
+    destination = i.dest
+    shortestPathSet = shortestPathSet.append(findShortestPath(source,destination)) 
+    //Data in shortestPathSet : source, destination, nodeTraversalList demandValue
+    //Uses Dijkstra's Algorithm to find the shortest path
+}
+
+//Calculate total flow for each link
+For each link within the graph obtain the link flow by adding 
+all the demand values for every shortest path that the link is a part of 
+
+for i in graph.link
+{
+    for j in shortestPathSet
+    {
+        //Below conditional needs modification
+        if (i.source == j.nodeTraversalList AND i.destination == j.nodeTraversalList) 
+        {
+            i.totalFlow = i.totalFlow +  j.demandValue
+        } 
+    }
+    if(i.totalFlow == 0)
+    {
+        //Turn OFF the link as it is not used
+        i.zValue = 0
+
+    }
+    else
+    {
+        //Select the least capacity that supports the totalFlow value and assign it to zValue
+    }
+}
+
