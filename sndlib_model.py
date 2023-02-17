@@ -1,4 +1,4 @@
-def formatData(data):
+def format_data(data):
     data = data.split("\n")
     for i in range(0,len(data)):
         data[i] = data[i].strip()
@@ -6,26 +6,32 @@ def formatData(data):
 
 
 def create_graph(filename):
+# Opening and reading the cotnets of the file in READ mode
     input_file = open(filename, "r")
 
     file_contents = input_file.read()
-
+# Finding the nodes section and adding everything within the nodes section into nodes_data 
     start_index = file_contents.find("NODES")
     end_index = file_contents.find("\n# LINK SECTION")
     node_data = file_contents[start_index+8:end_index-3]
 
+# Finding the links section and adding everything within the links section into link_data 
     start_index = file_contents.find("LINKS")
     end_index = file_contents.find("\n# DEMAND SECTION")
     link_data = file_contents[start_index+8:end_index-3]
 
+# Finding the demands section and adding everything within the demands section into demands_data 
     start_index = file_contents.find("DEMANDS")
     end_index = file_contents.find("\n# ADMISSIBLE PATHS SECTION")
     demands_data = file_contents[start_index+10:end_index-3]
 
-    node_data = formatData(node_data)
-    link_data = formatData(link_data)
-    demands_data = formatData(demands_data)
+#Formating the data using the format_data function
+    node_data = format_data(node_data)
+    link_data = format_data(link_data)
+    demands_data = format_data(demands_data)
 
+# Creating dictionaries to store the data as key value pairs. Split the data 
+# based on whitespaces and then add the data into corresponding varibles
     node_dict = {}
     links_dict = {}
     demands_dict = {}
@@ -36,6 +42,7 @@ def create_graph(filename):
             "x_coord": float(individual_data[2]),
             "y_coord": float(individual_data[3])
         }
+# Multiple mod_cap and mod_cost exist for a single link. Creating arrays to store these
     mod_cap = []
     mod_cost = []
     for i in link_data:
