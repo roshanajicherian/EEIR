@@ -1,5 +1,6 @@
 import networkx as nx
 import matplotlib.pyplot as plt
+import find_shortest_path
 graph = nx.Graph()
 
 def format_data(data):
@@ -72,6 +73,9 @@ def create_graph(filename):
             "target": individual_data[3],
             "demand_value": float(individual_data[6])
         }
-    nx.draw_spring(graph,with_labels = True)
-    plt.show()
-    return demands_dict
+    # print(graph.edges.keys())
+    # print(graph.nodes(data= True))
+    # print(graph)
+    # nx.draw_spring(graph,with_labels = True)
+    # plt.show()
+    return [demands_dict, graph]

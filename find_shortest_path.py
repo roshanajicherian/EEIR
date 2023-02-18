@@ -1,11 +1,11 @@
-import root
-graph = root.graph
+import networkx as nx
+import matplotlib.pyplot as plt
 
-def dijskatras_algorithm(source, destination):
-    pass
-
-for key, demand_vector in graph["demands"].items():
-    source = demand_vector["source"]
-    target = demand_vector["target"]
-    # print(f"Source: {source}, Target: {target}")
-    
+def find_shortest(demands_dict, graph):
+    demands = demands_dict
+    for key, demand_vector in demands_dict.items():
+        source = demand_vector["source"]
+        target = demand_vector["target"]
+        print(nx.dijkstra_path(graph,source, target))
+    nx.draw_spring(graph,with_labels = True)
+    plt.show()
