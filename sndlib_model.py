@@ -61,7 +61,7 @@ def create_graph(filename):
         graph.add_edge(individual_data[2],
                        individual_data[3], 
                        z_value = None,
-                       link_status = 1,
+                       link_on = True,
                        mod_cost = mod_cost,
                        mod_cap = mod_cap,
                        weight = mod_cost[0])
