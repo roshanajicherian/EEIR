@@ -1,3 +1,7 @@
+import networkx as nx
+import matplotlib.pyplot as plt
+graph = nx.Graph()
+
 def format_data(data):
     data = data.split("\n")
     for i in range(0,len(data)):
@@ -32,16 +36,12 @@ def create_graph(filename):
 
 # Creating dictionaries to store the data as key value pairs. Split the data 
 # based on whitespaces and then add the data into corresponding varibles
-    node_dict = {}
-    links_dict = {}
     demands_dict = {}
     for i in node_data:
         individual_data = i.split()
-        node_dict[individual_data[0]] = {
-            "name" : individual_data[0],
-            "x_coord": float(individual_data[2]),
-            "y_coord": float(individual_data[3])
-        }
+        graph.add_nodes_from([(individual_data[0], 
+                        {"x_coord" : float(individual_data[2]),
+                         "y_coord" : float(individual_data[3])})])
 # Multiple mod_cap and mod_cost exist for a single link. Creating arrays to store these
     mod_cap = []
     mod_cost = []
@@ -57,16 +57,13 @@ def create_graph(filename):
                 break
         mod_cap.reverse()
         mod_cost.reverse()
-        links_dict[individual_data[0]] = {
-            "name" : individual_data[0],
-            "source" : individual_data[2],
-            "target" : individual_data[3],
-            "z_value" : None,
-            "link_status" : 1,
-            "mod_cost" : mod_cost,
-            "mod_cap" : mod_cap
-        }
-
+        graph.add_edge(individual_data[2],
+                       individual_data[3], 
+                       z_value = None,
+                       link_status = 1,
+                       mod_cost = mod_cost,
+                       mod_cap = mod_cap,
+                       weight = mod_cost[0])
     for i in demands_data:
         individual_data = i.split()
         demands_dict[individual_data[0]] = {
@@ -75,12 +72,6 @@ def create_graph(filename):
             "target": individual_data[3],
             "demand_value": float(individual_data[6])
         }
-
-        graph_dict = {
-            "nodes" : dict(node_dict),
-            "links" : dict(links_dict),
-            "demands" : dict(demands_dict)
-        }
-
-    return(graph_dict)
-
+    nx.draw_spring(graph,with_labels = True)
+    plt.show()
+    return demands_dict
