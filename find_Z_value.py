@@ -1,8 +1,9 @@
+import copy
 def find_Z_value(graph):
     # For all of the edges which are turned on, find the zValue which best suits the total_flow
     for u,v,d in graph.edges(data = True):
         if(d["link_on"] == True):
-            mod_cap_temp = d["mod_cap"]
+            mod_cap_temp = copy.copy(d["mod_cap"])
             total_flow = d["total_flow"]
             for i in range(0,len(mod_cap_temp)):
                 mod_cap_temp[i] = mod_cap_temp[i] - total_flow
