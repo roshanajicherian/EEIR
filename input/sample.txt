@@ -1,0 +1,44 @@
+?SNDlib native format; type: network; version: 1.0
+# network pdh
+
+# NODE SECTION
+#
+# <node_id> [(<longitude>, <latitude>)]
+
+NODES (
+  N1 ( 10.02 53.34 )
+  N2 ( 8.41 50.07 )
+  N3 ( 8.24 49.01 )
+  N4 ( 9.11 48.47 )
+  N5 ( 11.34 48.08 )
+)
+
+# LINK SECTION
+#
+# <link_id> ( <source> <target> ) <pre_installed_capacity> <pre_installed_capacity_cost> <routing_cost> <setup_cost> ( {<module_capacity> <module_cost>}* )
+
+LINKS (
+  L1 ( N1 N2 ) 0.00 0.00 0.00 0.00 ( 1.00 88933.00 480.00 691901.00 1920.00 1625091.00 )
+  L2 ( N1 N3 ) 0.00 0.00 0.00 0.00 ( 1.00 88933.00 480.00 691901.00 1920.00 1625091.00 )
+  L3 ( N2 N4 ) 0.00 0.00 0.00 0.00 ( 1.00 88933.00 480.00 691901.00 1920.00 1625091.00 )
+  L4 ( N2 N3 ) 0.00 0.00 0.00 0.00 ( 1.00 88933.00 480.00 691901.00 1920.00 1625091.00 )
+  L5 ( N3 N5 ) 0.00 0.00 0.00 0.00 ( 1.00 88933.00 480.00 691901.00 1920.00 1625091.00 )
+  L6 ( N4 N5 ) 0.00 0.00 0.00 0.00 ( 1.00 88933.00 480.00 691901.00 1920.00 1625091.00 )
+  L7 ( N4 N6 ) 0.00 0.00 0.00 0.00 ( 1.00 88933.00 480.00 691901.00 1920.00 1625091.00 ) 
+  L7 ( N5 N6 ) 0.00 0.00 0.00 0.00 ( 1.00 88933.00 480.00 691901.00 1920.00 1625091.00 ) 
+)
+
+# DEMAND SECTION
+#
+# <demand_id> ( <source> <target> ) <routing_unit> <demand_value> <max_path_length>
+
+DEMANDS (
+  D1 ( N1 N5 ) 1 384.00 UNLIMITED
+)
+
+# ADMISSIBLE PATHS SECTION
+#
+# <demand_id> ( {<path_id> ( <link_id>+ )}+ )
+
+ADMISSIBLE_PATHS ( 
+)
