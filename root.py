@@ -7,8 +7,7 @@ demands_dict, graph = sndlib_model.create_graph(f"{os.getcwd()}/input/pdh.txt")
 # Finding the shortest path and calculating total flow 
 demands_dict, graph =  find_shortest.find_shortest(demands_dict,graph)
 printer.printGraph(graph)
+printer.plotGraph(graph)
 # Finding zValue for each edge within the graph
-# nx.draw_spring(graph,with_labels = True)
-# plt.show()
 # graph = find_Z_value.find_Z_value(graph)
 # print(graph.edges(data = True))

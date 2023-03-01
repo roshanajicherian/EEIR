@@ -12,18 +12,19 @@ def findTotalCost(pathList, graph):
     return totalCost
 
 def find_dst(graph, shortestPathList):
+    # ! Change DST to total_flow.Change it in node label also
     for i in range(0,len(shortestPathList)):
         source = shortestPathList[i]['source']
         target = shortestPathList[i]['target']
-        for j in shortestPathList[i]['pathList']:
-            neighboursList = [n for n in graph.neighbors(j)]
+        for u in shortestPathList[i]['pathList']:
+            neighboursList = [n for n in graph.neighbors(u)]
             for k in neighboursList:
-                if j==source:
-                    graph[j][k]['dst']+=(-shortestPathList[i]['demandValue'])
-                elif j==target:
-                    graph[j][k]['dst']+=(shortestPathList[i]['demandValue'])
+                if u==source:
+                    graph[u][k]['dst']+=(-shortestPathList[i]['demandValue'])
+                elif u==target:
+                    graph[u][k]['dst']+=(shortestPathList[i]['demandValue'])
                 else:
-                    graph[j][k]['dst']+=0
+                    graph[u][k]['dst']+=0
     return graph
 
 
@@ -49,17 +50,18 @@ def find_shortest(demands_dict, graph):
                 demandValue = demand_vector["demand_value"]
                 f.write(f"Source: {source}\tTarget: {target}\nPath List: {path_list}\nPath Length : {path_length}\nTotal Cost: {totalCost}\nDemand Value: {demandValue}\n")
                 if(totalCost<=demand_vector["demand_value"]):
-                    shortestPathList.append({"source" : source,
-                                            "target" : target,
-                                            "pathList" : path_list,
-                                            "pathLength" : path_length,
-                                            "totalCost" : totalCost,
-                                            "demandValue" : demandValue,
-                                            "dst" : 0})
+                    data = {"source" : source,
+                            "target" : target,
+                            "pathList" : path_list,
+                            "pathLength" : path_length,
+                            "totalCost" : totalCost,
+                            "demandValue" : demandValue,
+                            "dst" : 0}
+                    shortestPathList.append(data)
                     # Add the path_list to demands_dict
-                    # TODO: Add everything else also(not just pathList)
-                    demand_vector["shortestPathList"] = shortestPathList
+                    demand_vector["shortestPathList"] = data
                 else:
                     e.write(f"Source: {source}\tTarget: {target}\nPath List: {path_list}\nPath Length : {path_length}\nTotal Cost: {totalCost}\nDemand Value: {demandValue}\n")
             graph = find_dst(graph,shortestPathList)
+        demands_dict["total_flow"] = findTotalFlow(graph, demands_dict)
     return [demands_dict, graph]
