@@ -1,136 +1,136 @@
 u : N1	v: N9
-Edge Data:{'z_value': 513.0, 'link_on': True, 'mod_cost': [88933.0, 691901.0, 1625091.0], 'mod_cap': [30.0, 480.0, 1920.0], 'total_flow': -1407.0, 'weight': 1}
+Edge Data:{'resuidal_capacity': 513.0, 'z_value': 1920.0, 'link_on': True, 'mod_cost': [88933.0, 691901.0, 1625091.0], 'mod_cap': [30.0, 480.0, 1920.0], 'total_flow': -1407.0, 'weight': 1}
 
 
 u : N1	v: N10
-Edge Data:{'z_value': 1226.0, 'link_on': True, 'mod_cost': [149283.0, 988231.0, 2498805.0], 'mod_cap': [30.0, 480.0, 1920.0], 'total_flow': -694.0, 'weight': 1}
+Edge Data:{'resuidal_capacity': 1226.0, 'z_value': 1920.0, 'link_on': True, 'mod_cost': [149283.0, 988231.0, 2498805.0], 'mod_cap': [30.0, 480.0, 1920.0], 'total_flow': -694.0, 'weight': 1}
 
 
 u : N1	v: N7
-Edge Data:{'z_value': 142.0, 'link_on': True, 'mod_cost': [121988.0, 856906.0, 2109362.0], 'mod_cap': [30.0, 480.0, 1920.0], 'total_flow': -338.0, 'weight': 1}
+Edge Data:{'resuidal_capacity': 142.0, 'z_value': 480.0, 'link_on': True, 'mod_cost': [121988.0, 856906.0, 2109362.0], 'mod_cap': [30.0, 480.0, 1920.0], 'total_flow': -338.0, 'weight': 1}
 
 
 u : N1	v: N8
-Edge Data:{'z_value': 296.0, 'link_on': True, 'mod_cost': [132588.0, 907906.0, 2260602.0], 'mod_cap': [30.0, 480.0, 1920.0], 'total_flow': 184.0, 'weight': 1}
+Edge Data:{'resuidal_capacity': 296.0, 'z_value': 480.0, 'link_on': True, 'mod_cost': [132588.0, 907906.0, 2260602.0], 'mod_cap': [30.0, 480.0, 1920.0], 'total_flow': 184.0, 'weight': 1}
 
 
 u : N2	v: N10
-Edge Data:{'z_value': 1331.0, 'link_on': True, 'mod_cost': [106353.0, 781681.0, 1886283.0], 'mod_cap': [30.0, 480.0, 1920.0], 'total_flow': -589.0, 'weight': 1}
+Edge Data:{'resuidal_capacity': 1331.0, 'z_value': 1920.0, 'link_on': True, 'mod_cost': [106353.0, 781681.0, 1886283.0], 'mod_cap': [30.0, 480.0, 1920.0], 'total_flow': -589.0, 'weight': 1}
 
 
 u : N2	v: N11
-Edge Data:{'z_value': 233.0, 'link_on': True, 'mod_cost': [94297.0, 721289.0, 1709211.0], 'mod_cap': [30.0, 480.0, 1920.0], 'total_flow': -247.0, 'weight': 1}
+Edge Data:{'resuidal_capacity': 233.0, 'z_value': 480.0, 'link_on': True, 'mod_cost': [94297.0, 721289.0, 1709211.0], 'mod_cap': [30.0, 480.0, 1920.0], 'total_flow': -247.0, 'weight': 1}
 
 
 u : N2	v: N3
-Edge Data:{'z_value': 309.0, 'link_on': True, 'mod_cost': [84016.0, 664962.0, 1547981.0], 'mod_cap': [30.0, 480.0, 1920.0], 'total_flow': -171.0, 'weight': 1}
+Edge Data:{'resuidal_capacity': 309.0, 'z_value': 480.0, 'link_on': True, 'mod_cost': [84016.0, 664962.0, 1547981.0], 'mod_cap': [30.0, 480.0, 1920.0], 'total_flow': -171.0, 'weight': 1}
 
 
 u : N2	v: N4
-Edge Data:{'z_value': 421.0, 'link_on': True, 'mod_cost': [107148.0, 785506.0, 1897626.0], 'mod_cap': [30.0, 480.0, 1920.0], 'total_flow': -59.0, 'weight': 1}
+Edge Data:{'resuidal_capacity': 421.0, 'z_value': 480.0, 'link_on': True, 'mod_cost': [107148.0, 785506.0, 1897626.0], 'mod_cap': [30.0, 480.0, 1920.0], 'total_flow': -59.0, 'weight': 1}
 
 
 u : N2	v: N5
-Edge Data:{'z_value': 244.0, 'link_on': True, 'mod_cost': [139743.0, 942331.0, 2362689.0], 'mod_cap': [30.0, 480.0, 1920.0], 'total_flow': -236.0, 'weight': 1}
+Edge Data:{'resuidal_capacity': 244.0, 'z_value': 480.0, 'link_on': True, 'mod_cost': [139743.0, 942331.0, 2362689.0], 'mod_cap': [30.0, 480.0, 1920.0], 'total_flow': -236.0, 'weight': 1}
 
 
 u : N2	v: N6
-Edge Data:{'z_value': 291.0, 'link_on': True, 'mod_cost': [113773.0, 817381.0, 1992151.0], 'mod_cap': [30.0, 480.0, 1920.0], 'total_flow': -189.0, 'weight': 1}
+Edge Data:{'resuidal_capacity': 291.0, 'z_value': 480.0, 'link_on': True, 'mod_cost': [113773.0, 817381.0, 1992151.0], 'mod_cap': [30.0, 480.0, 1920.0], 'total_flow': -189.0, 'weight': 1}
 
 
 u : N2	v: N8
-Edge Data:{'z_value': 191.0, 'link_on': True, 'mod_cost': [136828.0, 928306.0, 2321098.0], 'mod_cap': [30.0, 480.0, 1920.0], 'total_flow': 289.0, 'weight': 1}
+Edge Data:{'resuidal_capacity': 191.0, 'z_value': 480.0, 'link_on': True, 'mod_cost': [136828.0, 928306.0, 2321098.0], 'mod_cap': [30.0, 480.0, 1920.0], 'total_flow': 289.0, 'weight': 1}
 
 
 u : N2	v: N9
-Edge Data:{'z_value': 618.0, 'link_on': True, 'mod_cost': [124638.0, 869656.0, 2147172.0], 'mod_cap': [30.0, 480.0, 1920.0], 'total_flow': -1302.0, 'weight': 1}
+Edge Data:{'resuidal_capacity': 618.0, 'z_value': 1920.0, 'link_on': True, 'mod_cost': [124638.0, 869656.0, 2147172.0], 'mod_cap': [30.0, 480.0, 1920.0], 'total_flow': -1302.0, 'weight': 1}
 
 
 u : N3	v: N10
-Edge Data:{'z_value': 428.0, 'link_on': True, 'mod_cost': [129408.0, 892606.0, 2215230.0], 'mod_cap': [30.0, 480.0, 1920.0], 'total_flow': 52.0, 'weight': 1}
+Edge Data:{'resuidal_capacity': 428.0, 'z_value': 480.0, 'link_on': True, 'mod_cost': [129408.0, 892606.0, 2215230.0], 'mod_cap': [30.0, 480.0, 1920.0], 'total_flow': 52.0, 'weight': 1}
 
 
 u : N3	v: N11
-Edge Data:{'z_value': 86.0, 'link_on': True, 'mod_cost': [114038.0, 818656.0, 1995932.0], 'mod_cap': [30.0, 480.0, 1920.0], 'total_flow': 394.0, 'weight': 1}
+Edge Data:{'resuidal_capacity': 86.0, 'z_value': 480.0, 'link_on': True, 'mod_cost': [114038.0, 818656.0, 1995932.0], 'mod_cap': [30.0, 480.0, 1920.0], 'total_flow': 394.0, 'weight': 1}
 
 
 u : N3	v: N4
-Edge Data:{'z_value': 1338.0, 'link_on': True, 'mod_cost': [70159.0, 589043.0, 1330671.0], 'mod_cap': [30.0, 480.0, 1920.0], 'total_flow': 582.0, 'weight': 1}
+Edge Data:{'resuidal_capacity': 1338.0, 'z_value': 1920.0, 'link_on': True, 'mod_cost': [70159.0, 589043.0, 1330671.0], 'mod_cap': [30.0, 480.0, 1920.0], 'total_flow': 582.0, 'weight': 1}
 
 
 u : N3	v: N5
-Edge Data:{'z_value': 75.0, 'link_on': True, 'mod_cost': [124638.0, 869656.0, 2147172.0], 'mod_cap': [30.0, 480.0, 1920.0], 'total_flow': 405.0, 'weight': 1}
+Edge Data:{'resuidal_capacity': 75.0, 'z_value': 480.0, 'link_on': True, 'mod_cost': [124638.0, 869656.0, 2147172.0], 'mod_cap': [30.0, 480.0, 1920.0], 'total_flow': 405.0, 'weight': 1}
 
 
 u : N3	v: N6
-Edge Data:{'z_value': 28.0, 'link_on': True, 'mod_cost': [112978.0, 813556.0, 1980808.0], 'mod_cap': [30.0, 480.0, 1920.0], 'total_flow': 452.0, 'weight': 1}
+Edge Data:{'resuidal_capacity': 28.0, 'z_value': 480.0, 'link_on': True, 'mod_cost': [112978.0, 813556.0, 1980808.0], 'mod_cap': [30.0, 480.0, 1920.0], 'total_flow': 452.0, 'weight': 1}
 
 
 u : N4	v: N5
-Edge Data:{'z_value': 1403.0, 'link_on': True, 'mod_cost': [103438.0, 767656.0, 1844692.0], 'mod_cap': [30.0, 480.0, 1920.0], 'total_flow': 517.0, 'weight': 1}
+Edge Data:{'resuidal_capacity': 1403.0, 'z_value': 1920.0, 'link_on': True, 'mod_cost': [103438.0, 767656.0, 1844692.0], 'mod_cap': [30.0, 480.0, 1920.0], 'total_flow': 517.0, 'weight': 1}
 
 
 u : N4	v: N6
-Edge Data:{'z_value': 1356.0, 'link_on': True, 'mod_cost': [102643.0, 763831.0, 1833349.0], 'mod_cap': [30.0, 480.0, 1920.0], 'total_flow': 564.0, 'weight': 1}
+Edge Data:{'resuidal_capacity': 1356.0, 'z_value': 1920.0, 'link_on': True, 'mod_cost': [102643.0, 763831.0, 1833349.0], 'mod_cap': [30.0, 480.0, 1920.0], 'total_flow': 564.0, 'weight': 1}
 
 
 u : N5	v: N6
-Edge Data:{'z_value': 93.0, 'link_on': True, 'mod_cost': [91168.0, 704146.0, 1660141.0], 'mod_cap': [30.0, 480.0, 1920.0], 'total_flow': 387.0, 'weight': 1}
+Edge Data:{'resuidal_capacity': 93.0, 'z_value': 480.0, 'link_on': True, 'mod_cost': [91168.0, 704146.0, 1660141.0], 'mod_cap': [30.0, 480.0, 1920.0], 'total_flow': 387.0, 'weight': 1}
 
 
 u : N5	v: N7
-Edge Data:{'z_value': 137.0, 'link_on': True, 'mod_cost': [187973.0, 1174381.0, 3050831.0], 'mod_cap': [30.0, 480.0, 1920.0], 'total_flow': 343.0, 'weight': 1}
+Edge Data:{'resuidal_capacity': 137.0, 'z_value': 480.0, 'link_on': True, 'mod_cost': [187973.0, 1174381.0, 3050831.0], 'mod_cap': [30.0, 480.0, 1920.0], 'total_flow': 343.0, 'weight': 1}
 
 
 u : N5	v: N8
-Edge Data:{'z_value': 1055.0, 'link_on': True, 'mod_cost': [151933.0, 1000981.0, 2536615.0], 'mod_cap': [30.0, 480.0, 1920.0], 'total_flow': 865.0, 'weight': 1}
+Edge Data:{'resuidal_capacity': 1055.0, 'z_value': 1920.0, 'link_on': True, 'mod_cost': [151933.0, 1000981.0, 2536615.0], 'mod_cap': [30.0, 480.0, 1920.0], 'total_flow': 865.0, 'weight': 1}
 
 
 u : N6	v: N8
-Edge Data:{'z_value': 1008.0, 'link_on': True, 'mod_cost': [119603.0, 845431.0, 2075333.0], 'mod_cap': [30.0, 480.0, 1920.0], 'total_flow': 912.0, 'weight': 1}
+Edge Data:{'resuidal_capacity': 1008.0, 'z_value': 1920.0, 'link_on': True, 'mod_cost': [119603.0, 845431.0, 2075333.0], 'mod_cap': [30.0, 480.0, 1920.0], 'total_flow': 912.0, 'weight': 1}
 
 
 u : N6	v: N9
-Edge Data:{'z_value': 1241.0, 'link_on': True, 'mod_cost': [150343.0, 993331.0, 2513929.0], 'mod_cap': [30.0, 480.0, 1920.0], 'total_flow': -679.0, 'weight': 1}
+Edge Data:{'resuidal_capacity': 1241.0, 'z_value': 1920.0, 'link_on': True, 'mod_cost': [150343.0, 993331.0, 2513929.0], 'mod_cap': [30.0, 480.0, 1920.0], 'total_flow': -679.0, 'weight': 1}
 
 
 u : N7	v: N10
-Edge Data:{'z_value': 20.0, 'link_on': True, 'mod_cost': [185588.0, 1162906.0, 3016802.0], 'mod_cap': [30.0, 480.0, 1920.0], 'total_flow': -10.0, 'weight': 1}
+Edge Data:{'resuidal_capacity': 20.0, 'z_value': 30.0, 'link_on': True, 'mod_cost': [185588.0, 1162906.0, 3016802.0], 'mod_cap': [30.0, 480.0, 1920.0], 'total_flow': -10.0, 'weight': 1}
 
 
 u : N7	v: N11
-Edge Data:{'z_value': 148.0, 'link_on': True, 'mod_cost': [190093.0, 1184581.0, 3081079.0], 'mod_cap': [30.0, 480.0, 1920.0], 'total_flow': 332.0, 'weight': 1}
+Edge Data:{'resuidal_capacity': 148.0, 'z_value': 480.0, 'link_on': True, 'mod_cost': [190093.0, 1184581.0, 3081079.0], 'mod_cap': [30.0, 480.0, 1920.0], 'total_flow': 332.0, 'weight': 1}
 
 
 u : N7	v: N8
-Edge Data:{'z_value': 1052.0, 'link_on': True, 'mod_cost': [93403.0, 716391.0, 1695191.0], 'mod_cap': [30.0, 480.0, 1920.0], 'total_flow': 868.0, 'weight': 1}
+Edge Data:{'resuidal_capacity': 1052.0, 'z_value': 1920.0, 'link_on': True, 'mod_cost': [93403.0, 716391.0, 1695191.0], 'mod_cap': [30.0, 480.0, 1920.0], 'total_flow': 868.0, 'weight': 1}
 
 
 u : N7	v: N9
-Edge Data:{'z_value': 1197.0, 'link_on': True, 'mod_cost': [125698.0, 874756.0, 2162296.0], 'mod_cap': [30.0, 480.0, 1920.0], 'total_flow': -723.0, 'weight': 1}
+Edge Data:{'resuidal_capacity': 1197.0, 'z_value': 1920.0, 'link_on': True, 'mod_cost': [125698.0, 874756.0, 2162296.0], 'mod_cap': [30.0, 480.0, 1920.0], 'total_flow': -723.0, 'weight': 1}
 
 
 u : N8	v: N10
-Edge Data:{'z_value': 1408.0, 'link_on': True, 'mod_cost': [164388.0, 1060906.0, 2714322.0], 'mod_cap': [30.0, 480.0, 1920.0], 'total_flow': 512.0, 'weight': 1}
+Edge Data:{'resuidal_capacity': 1408.0, 'z_value': 1920.0, 'link_on': True, 'mod_cost': [164388.0, 1060906.0, 2714322.0], 'mod_cap': [30.0, 480.0, 1920.0], 'total_flow': 512.0, 'weight': 1}
 
 
 u : N8	v: N11
-Edge Data:{'z_value': 1066.0, 'link_on': True, 'mod_cost': [164918.0, 1063456.0, 2721884.0], 'mod_cap': [30.0, 480.0, 1920.0], 'total_flow': 854.0, 'weight': 1}
+Edge Data:{'resuidal_capacity': 1066.0, 'z_value': 1920.0, 'link_on': True, 'mod_cost': [164918.0, 1063456.0, 2721884.0], 'mod_cap': [30.0, 480.0, 1920.0], 'total_flow': 854.0, 'weight': 1}
 
 
 u : N8	v: N9
-Edge Data:{'z_value': 279.0, 'link_on': True, 'mod_cost': [117218.0, 833956.0, 2041304.0], 'mod_cap': [30.0, 480.0, 1920.0], 'total_flow': -201.0, 'weight': 1}
+Edge Data:{'resuidal_capacity': 279.0, 'z_value': 480.0, 'link_on': True, 'mod_cost': [117218.0, 833956.0, 2041304.0], 'mod_cap': [30.0, 480.0, 1920.0], 'total_flow': -201.0, 'weight': 1}
 
 
 u : N9	v: N10
-Edge Data:{'z_value': 841.0, 'link_on': True, 'mod_cost': [121193.0, 853081.0, 2098019.0], 'mod_cap': [30.0, 480.0, 1920.0], 'total_flow': -1079.0, 'weight': 1}
+Edge Data:{'resuidal_capacity': 841.0, 'z_value': 1920.0, 'link_on': True, 'mod_cost': [121193.0, 853081.0, 2098019.0], 'mod_cap': [30.0, 480.0, 1920.0], 'total_flow': -1079.0, 'weight': 1}
 
 
 u : N9	v: N11
-Edge Data:{'z_value': 1183.0, 'link_on': True, 'mod_cost': [130203.0, 896431.0, 2226573.0], 'mod_cap': [30.0, 480.0, 1920.0], 'total_flow': -737.0, 'weight': 1}
+Edge Data:{'resuidal_capacity': 1183.0, 'z_value': 1920.0, 'link_on': True, 'mod_cost': [130203.0, 896431.0, 2226573.0], 'mod_cap': [30.0, 480.0, 1920.0], 'total_flow': -737.0, 'weight': 1}
 
 
 u : N10	v: N11
-Edge Data:{'z_value': 6.0, 'link_on': True, 'mod_cost': [59431.0, 530267.0, 1162431.0], 'mod_cap': [30.0, 480.0, 1920.0], 'total_flow': -24.0, 'weight': 1}
+Edge Data:{'resuidal_capacity': 6.0, 'z_value': 30.0, 'link_on': True, 'mod_cost': [59431.0, 530267.0, 1162431.0], 'mod_cap': [30.0, 480.0, 1920.0], 'total_flow': -24.0, 'weight': 1}
 
 

@@ -1,6 +1,5 @@
 import networkx as nx
 import matplotlib.pyplot as plt
-import find_shortest_path
 graph = nx.Graph()
 
 def format_data(data):
@@ -60,6 +59,9 @@ def create_graph(filename):
         mod_cost.reverse()
         graph.add_edge(individual_data[2],
                        individual_data[3], 
+                       z_value_temp = 0,
+                       e_value = 0,
+                       resuidal_capacity = 0,
                        z_value = None,
                        link_on = True,
                        mod_cost = mod_cost,

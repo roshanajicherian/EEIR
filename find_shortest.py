@@ -11,7 +11,8 @@ def find_z_value(graph):
                 mod_cap_temp[i] = mod_cap_temp[i] - total_flow
             # Finding minimum possible positive value i.e. finding the closest value to total_flow
             minimum_capacity = min([i for i in mod_cap_temp if i > 0])
-            d["z_value"] = minimum_capacity
+            d["z_value"] = minimum_capacity + total_flow
+            d["resuidal_capacity"] = minimum_capacity 
     return graph
 
 def findTotalCost(pathList, graph):
