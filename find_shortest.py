@@ -1,5 +1,18 @@
 import networkx as nx
+import copy 
 shortestPathList = []
+
+def find_z_value(graph):
+    for u,v,d in graph.edges(data = True):
+        if(d["link_on"] == True):
+            mod_cap_temp = copy.copy(d["mod_cap"])
+            total_flow = abs(d["total_flow"])
+            for i in range(0,len(mod_cap_temp)):
+                mod_cap_temp[i] = mod_cap_temp[i] - total_flow
+            # Finding minimum possible positive value i.e. finding the closest value to total_flow
+            minimum_capacity = min([i for i in mod_cap_temp if i > 0])
+            d["z_value"] = minimum_capacity
+    return graph
 
 def findTotalCost(pathList, graph):
     totalCost = 0
@@ -34,6 +47,9 @@ def find_dst(graph, shortestPathList):
                     #!!Debugging Code
                     if((u== "N9" and k == "N2") or (u=="N2" and k == "N9")):
                         wei.write(f"Source : {source}\t\tTarget: {target}\nPath List : {shortestPathList[i]['pathList']}\nu : {u}\nk: {k}\nValue : {temp}\nFinal: {graph[u][k]['total_flow']}\n\n")
+    for u,v,d in graph.edges(data = True):
+        if(d["total_flow"] == 0):
+            d["link_on"] = False
     return graph
 
 
@@ -75,4 +91,5 @@ def find_shortest(demands_dict, graph):
                     #!Debugging Code
                     e.write(f"Source: {source}\tTarget: {target}\nPath List: {path_list}\nPath Length : {path_length}\nTotal Cost: {totalCost}\nDemand Value: {demandValue}\n")
             graph = find_dst(graph,shortestPathList)
+            graph = find_z_value(graph)
     return [demands_dict, graph]
