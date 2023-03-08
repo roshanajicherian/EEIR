@@ -1,0 +1,91 @@
+Source : N9		Target: N2
+Path List : ['N9', 'N2']
+u : N9
+k: N2
+Value : -384.0
+Final: -384.0
+
+Source : N9		Target: N2
+Path List : ['N9', 'N2']
+u : N2
+k: N9
+Value : 384.0
+Final: 0.0
+
+Source : N9		Target: N11
+Path List : ['N9', 'N11']
+u : N9
+k: N2
+Value : -160.0
+Final: -160.0
+
+Source : N2		Target: N8
+Path List : ['N2', 'N8']
+u : N2
+k: N9
+Value : -160.0
+Final: -320.0
+
+Source : N2		Target: N5
+Path List : ['N2', 'N5']
+u : N2
+k: N9
+Value : -144.0
+Final: -464.0
+
+Source : N9		Target: N8
+Path List : ['N9', 'N8']
+u : N9
+k: N2
+Value : -100.0
+Final: -564.0
+
+Source : N2		Target: N3
+Path List : ['N2', 'N3']
+u : N2
+k: N9
+Value : -278.0
+Final: -842.0
+
+Source : N11		Target: N2
+Path List : ['N11', 'N2']
+u : N2
+k: N9
+Value : 266.0
+Final: -576.0
+
+Source : N9		Target: N10
+Path List : ['N9', 'N10']
+u : N9
+k: N2
+Value : -263.0
+Final: -839.0
+
+Source : N1		Target: N9
+Path List : ['N1', 'N9']
+u : N9
+k: N2
+Value : 258.0
+Final: -581.0
+
+Source : N9		Target: N7
+Path List : ['N9', 'N7']
+u : N9
+k: N2
+Value : -247.0
+Final: -828.0
+
+Source : N2		Target: N6
+Path List : ['N2', 'N6']
+u : N2
+k: N9
+Value : -237.0
+Final: -1065.0
+
+Source : N2		Target: N4
+Path List : ['N2', 'N4']
+u : N2
+k: N9
+Value : -237.0
+Final: -1302.0
+

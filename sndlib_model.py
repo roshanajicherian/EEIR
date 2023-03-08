@@ -64,7 +64,7 @@ def create_graph(filename):
                        link_on = True,
                        mod_cost = mod_cost,
                        mod_cap = mod_cap,
-                       dst = 0,
+                       total_flow = 0,
                        weight = 1)
     for i in demands_data:
         individual_data = i.split()

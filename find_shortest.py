@@ -12,19 +12,28 @@ def findTotalCost(pathList, graph):
     return totalCost
 
 def find_dst(graph, shortestPathList):
-    # ! Change DST to total_flow.Change it in node label also
-    for i in range(0,len(shortestPathList)):
-        source = shortestPathList[i]['source']
-        target = shortestPathList[i]['target']
-        for u in shortestPathList[i]['pathList']:
-            neighboursList = [n for n in graph.neighbors(u)]
-            for k in neighboursList:
-                if u==source:
-                    graph[u][k]['dst']+=(-shortestPathList[i]['demandValue'])
-                elif u==target:
-                    graph[u][k]['dst']+=(shortestPathList[i]['demandValue'])
-                else:
-                    graph[u][k]['dst']+=0
+    with open("weight.txt", "w") as wei:
+        #For every shortest path that has been generated do the follwing
+        for i in range(0,len(shortestPathList)):
+            source = shortestPathList[i]['source']
+            target = shortestPathList[i]['target']
+            for u in shortestPathList[i]['pathList']:
+                # For each node in the shortest path list find all the neigbhours of that node
+                neighboursList = [n for n in graph.neighbors(u)]
+                for k in neighboursList:
+                    # Set the value of dst and total flow based on the eqauation given
+                    if u==source:
+                        temp = -shortestPathList[i]['demandValue']
+                        graph[u][k]['total_flow']+=(-shortestPathList[i]['demandValue'])
+                    elif u==target:
+                        temp = shortestPathList[i]['demandValue']
+                        graph[u][k]['total_flow']+=(shortestPathList[i]['demandValue'])
+                    else:
+                        temp = 0
+                        graph[u][k]['total_flow']+=0
+                    #!!Debugging Code
+                    if((u== "N9" and k == "N2") or (u=="N2" and k == "N9")):
+                        wei.write(f"Source : {source}\t\tTarget: {target}\nPath List : {shortestPathList[i]['pathList']}\nu : {u}\nk: {k}\nValue : {temp}\nFinal: {graph[u][k]['total_flow']}\n\n")
     return graph
 
 
@@ -48,7 +57,9 @@ def find_shortest(demands_dict, graph):
                 path_length = nx.dijkstra_path_length(graph,source, target)
                 totalCost = findTotalCost(path_list, graph)
                 demandValue = demand_vector["demand_value"]
+                #!Debugging Code
                 f.write(f"Source: {source}\tTarget: {target}\nPath List: {path_list}\nPath Length : {path_length}\nTotal Cost: {totalCost}\nDemand Value: {demandValue}\n")
+                #TODO: Possible change over here in COST266
                 if(totalCost<=demand_vector["demand_value"]):
                     data = {"source" : source,
                             "target" : target,
@@ -61,7 +72,7 @@ def find_shortest(demands_dict, graph):
                     # Add the path_list to demands_dict
                     demand_vector["shortestPathList"] = data
                 else:
+                    #!Debugging Code
                     e.write(f"Source: {source}\tTarget: {target}\nPath List: {path_list}\nPath Length : {path_length}\nTotal Cost: {totalCost}\nDemand Value: {demandValue}\n")
             graph = find_dst(graph,shortestPathList)
-        demands_dict["total_flow"] = findTotalFlow(graph, demands_dict)
     return [demands_dict, graph]
