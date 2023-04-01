@@ -45,6 +45,10 @@ def find_dst(graph, shortestPathList):
                     else:
                         temp = 0
                         graph[u][k]['total_flow']+=0
+            for u in shortestPathList[i]['pathList']:
+                    neighboursList = [n for n in graph.neighbors(u)]
+                    for k in neighboursList:
+                        graph[u][k]['total_flow'] = abs(graph[u][k]['total_flow'])
                     #!!Debugging Code
                     if((u== "N9" and k == "N2") or (u=="N2" and k == "N9")):
                         wei.write(f"Source : {source}\t\tTarget: {target}\nPath List : {shortestPathList[i]['pathList']}\nu : {u}\nk: {k}\nValue : {temp}\nFinal: {graph[u][k]['total_flow']}\n\n")
