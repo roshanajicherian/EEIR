@@ -11,9 +11,9 @@ def runner(topology):
     # Finding the shortest path and calculating total flow 
     demands_dict, graph =  find_shortest.find_shortest(demands_dict,graph)
     #prinitng and plotting graph data
-    printer.printGraph(graph)
+    status, graph = reroute.reroute(graph,demands_dict)
     printer.plotGraph(graph)
-    reroute.reroute(graph,demands_dict)
+    printer.printGraph(graph)
 
 def back():
     global my_label, myImage1, myImage2, myImage3,button_back,button_exit,button_forward
@@ -23,7 +23,6 @@ def back():
     prev_image-=1
     my_label = Label(outputFrame1,image=image_list[prev_image])
     button_forward = Button(outputFrame1,text = ">>", command=forward)
-    print(prev_image)
     if(prev_image>=1):
         button_back = Button(outputFrame1,text="<<", command= back)
     else:
@@ -55,9 +54,9 @@ def confirmButton():
     global my_label, myImage1, myImage2, myImage3,button_back,button_exit,button_forward
     global image_list, totalImages, current_image, next_image, prev_image
     runner(topology=str(clicked.get()))
-    myImage1= ImageTk.PhotoImage(Image.open("images/initialConfig.png"))
-    myImage2= ImageTk.PhotoImage(Image.open("images/totalFlow.png"))
-    myImage3= ImageTk.PhotoImage(Image.open("images/transmissionCapacityInitial.png"))
+    myImage1= ImageTk.PhotoImage(Image.open("images/totalFlow.png"))
+    myImage2= ImageTk.PhotoImage(Image.open("images/transmissionCapacityInitial.png"))
+    myImage3= ImageTk.PhotoImage(Image.open("images/transmissionCapacityFinal.png"))
     image_list = [myImage1,myImage2,myImage3]
     totalImages = len(image_list)
     current_image = 0

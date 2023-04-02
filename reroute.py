@@ -1,5 +1,5 @@
 import networkx as nx
-
+import find_shortest
 def find_new_D_set(graph, demands_dict,e_value):
     d_list = {}
     for key, demand_vector in demands_dict.items():
@@ -19,6 +19,7 @@ def reroute(graph, demands_dict):
         target  = v
         current_mod_cost = d['z_value']
         current_mod_cost_index = d['mod_cap'].index(current_mod_cost)
+        graph = find_shortest.findLower(graph)
         # if the lowest transmission capacity possible is the base transmission
         # then switch of the link and try to route
         if(current_mod_cost_index == 0):
@@ -49,4 +50,4 @@ def reroute(graph, demands_dict):
             #     kth_shortest_path = alt_paths[k - 1]
             # except IndexError:
             #     return None
-    return status
+    return status, graph
