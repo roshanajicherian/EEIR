@@ -43,11 +43,11 @@ def reroute(graph, demands_dict):
                     d["resuidal_capacity"]+=shortest_path_data["demand_value"]
             source = shortest_path_data["source"]
             target = shortest_path_data["target"]
-            # alt_paths = nx.all_simple_paths(graph,source,target)
-            # alt_paths = list(alt_paths)
-            # alt_paths = sorted(alt_paths, key=lambda path: len(path))
-            # try:
-            #     kth_shortest_path = alt_paths[k - 1]
-            # except IndexError:
-            #     return None
+            alt_paths = nx.all_simple_paths(graph,source,target)
+            alt_paths = list(alt_paths)
+            alt_paths = sorted(alt_paths, key=lambda path: len(path))
+            try:
+                kth_shortest_path = alt_paths[k - 1]
+            except IndexError:
+                return None
     return status, graph
