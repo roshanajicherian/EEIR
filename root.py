@@ -1,4 +1,4 @@
-import sndlib_model, os, find_shortest,printer, reroute
+import sndlib_model, os, find_shortest,printer, reroute, learning
 import networkx as nx
 import matplotlib.pyplot as plt
 from tkinter import *
@@ -14,6 +14,18 @@ def runner(topology):
     #prinitng and plotting graph data
     printer.plotGraph(graph)
     printer.printGraph(graph)
+    weight_list = []
+    z_value_list = []
+    e_value_list = []
+    for u,v,d in graph.edges(data = True):
+        for i in d:
+            updated_transmission = d["updated_tranmission"]
+            z_value = d["z_value"]
+            e_value = d["e_value"]
+            weight_list.append(updated_transmission)
+            z_value_list.append(z_value)
+            e_value_list.append(e_value)
+    # learning.neural(weight_list,z_value_list,e_value_list)
 
 def back():
     #defining the functions of the back button in the GUI
