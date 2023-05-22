@@ -20,6 +20,7 @@ def reroute(graph, demands_dict):
         current_mod_cost = d['z_value']
         current_mod_cost_index = d['mod_cap'].index(current_mod_cost)
         graph = find_shortest.findLower(graph)
+        graph = find_shortest.findUpper(graph)
         # if the lowest transmission capacity possible is the base transmission
         # then switch of the link and try to route
         if(current_mod_cost_index == 0):

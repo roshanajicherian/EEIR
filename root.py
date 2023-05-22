@@ -74,7 +74,9 @@ def confirmButton():
     myImage1= ImageTk.PhotoImage(Image.open("images/totalFlow.png"))
     myImage2= ImageTk.PhotoImage(Image.open("images/transmissionCapacityInitial.png"))
     myImage3= ImageTk.PhotoImage(Image.open("images/transmissionCapacityFinal.png"))
-    image_list = [myImage1,myImage2,myImage3]
+    myImage4= ImageTk.PhotoImage(Image.open("images/transmissionCapacityNeural.png"))
+    
+    image_list = [myImage1,myImage2,myImage3, myImage4]
     totalImages = len(image_list)
     current_image = 0
     next_image = 0

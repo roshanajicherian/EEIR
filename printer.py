@@ -40,5 +40,15 @@ def plotGraph(graph):
     plt.savefig("images/transmissionCapacityFinal.png")
     plt.figure().clear()
 
+    nx.draw(graph,pos,with_labels = True, 
+            node_color = "grey", font_color = "white", node_size = 800, 
+            width = 2.0, edge_color = "grey")
+    
+    edge_weights = {(u,v) : d["updated_tranmission_final"] for u,v,d in graph.edges(data= True)}
+    nx.draw_networkx_edge_labels(graph,pos,edge_weights, label_pos= 0.5)
+    plt.figtext(0.5, 0.01, "Transmission Capacity (After training using neural network)", wrap=True, horizontalalignment='center', fontsize=12)
+    plt.savefig("images/transmissionCapacityNeural.png")
+    plt.figure().clear()    
+
     
 

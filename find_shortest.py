@@ -79,6 +79,19 @@ def findLower(graph):
         count+=1
     return graph
 
+def findUpper(graph):
+    count = 0
+    for u,v,d in graph.edges(data = True):
+        current = d["z_value"]
+        modCaps = d["mod_cap"]
+        modIndex = modCaps.index(current)
+        if count%6==0 and modIndex-1>=0:
+            d["updated_tranmission_final"] = modCaps[modIndex-1]
+        else:
+            d["updated_tranmission_final"] = modCaps[modIndex]
+        count+=1
+    return graph
+
 def find_shortest(demands_dict, graph):
     with open("output.txt", "w") as f:
         with open("errors.txt", "w") as e:
