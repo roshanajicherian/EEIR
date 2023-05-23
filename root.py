@@ -1,9 +1,9 @@
 import sndlib_model, os, find_shortest,printer, reroute, learning
+from input import learn as learning
 import networkx as nx
 import matplotlib.pyplot as plt
 from tkinter import *
 from PIL import ImageTk, Image
-
 def runner(topology):
     # Creting graph and demands_dict
     demands_dict, graph = sndlib_model.create_graph(f"{os.getcwd()}/input/{topology}.txt")
@@ -25,7 +25,7 @@ def runner(topology):
             weight_list.append(updated_transmission)
             z_value_list.append(z_value)
             e_value_list.append(e_value)
-    # learning.neural(weight_list,z_value_list,e_value_list)
+    learning.neural(weight_list,z_value_list,e_value_list)
 
 def back():
     #defining the functions of the back button in the GUI

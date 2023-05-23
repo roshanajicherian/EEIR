@@ -37,5 +37,7 @@ def neural(weight_list,z_list,e_list):
     for i in range(3):
         _, loss_val = sess.run([optimizer, loss], feed_dict={weight: weight_train, z_value: z_value_train, e_value: e_value_train})
         
-    # # Evaluate the model
-    # y_pred = sess.run(output, feed_dict={weight: weight_test, z_value: z_value_test, e_value: e_value_test})
+    # Evaluate the model
+    updated = sess.run(output, feed_dict={weight: weight_test, z_value: z_value_test, e_value: e_value_test})
+
+    return updated
