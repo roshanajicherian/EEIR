@@ -1,8 +1,8 @@
 import sndlib_model, os, find_shortest,printer, reroute, learning
-from input import learn as learning
 import networkx as nx
 import matplotlib.pyplot as plt
 from tkinter import *
+from input import learn as learning
 from PIL import ImageTk, Image
 def runner(topology):
     # Creting graph and demands_dict
