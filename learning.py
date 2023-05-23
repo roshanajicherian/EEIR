@@ -1,5 +1,5 @@
 import tensorflow as tf
-def neural(weight_list,z_list,e_list):
+def neural(weight_list,z_list,e_list, demands_dict,graph):
     # Define the input placeholders
     tf.compat.v1.disable_eager_execution()
     weight = tf.compat.v1.placeholder(tf.float32, shape=[None, 1], name='weight')
@@ -13,8 +13,8 @@ def neural(weight_list,z_list,e_list):
     weight_test = weight_list[divider+1:]
     z_value_train = z_list[:divider]
     z_value_test = z_list[divider+1:]
-    e_value_train = e_value[:divider]
-    e_value_test = e_value[divider+1:]
+    e_value_train = e_list[:divider]
+    e_value_test = e_list[divider+1:]
     # Define the RNN layer
     tf.compat.v1.nn.dynamic_rnn
     rnn_cell = tf.compat.v1.nn.rnn_cell.LSTMCell(num_units=64)
@@ -38,6 +38,6 @@ def neural(weight_list,z_list,e_list):
         _, loss_val = sess.run([optimizer, loss], feed_dict={weight: weight_train, z_value: z_value_train, e_value: e_value_train})
         
     # Evaluate the model
-    updated = sess.run(output, feed_dict={weight: weight_test, z_value: z_value_test, e_value: e_value_test})
+    demands_updated, graph_updated = sess.run(output, feed_dict={weight: weight_test, z_value: z_value_test, e_value: e_value_test})
 
-    return updated
+    return demands_updated, graph_updated

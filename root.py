@@ -25,7 +25,7 @@ def runner(topology):
             weight_list.append(updated_transmission)
             z_value_list.append(z_value)
             e_value_list.append(e_value)
-    learning.neural(weight_list,z_value_list,e_value_list)
+    demands_dict,graph =  learning.neural(weight_list,z_value_list,e_value_list,demands_dict,graph)
 
 def back():
     #defining the functions of the back button in the GUI
