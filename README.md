@@ -3,7 +3,7 @@
 ## Installation
 To run the follwing simulation, after having cloned the repository, install the required modules by using *pip*. Run the follwing command to instal the required modules
 ```python
-pip install requirements.txt
+pip install -r requirements.txt
 ```
 Once all the packages have been installed, run 
 ```python
